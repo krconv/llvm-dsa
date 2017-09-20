@@ -1,4 +1,4 @@
-add_library (DSA STATIC
+add_llvm_library( DSA
   AddressTakenAnalysis.cpp
   CallTargets.cpp
   DSTest.cpp
@@ -20,5 +20,4 @@ add_library (DSA STATIC
   Local.cpp
   SanityCheck.cpp
   Steensgaard.cpp
-)
-
+  )

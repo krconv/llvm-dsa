@@ -1,4 +1,4 @@
-add_library (AssistDS STATIC
+add_llvm_library( AssistDS
   ArgCast.cpp
   Devirt.cpp
   GEPExprArgs.cpp
@@ -19,6 +19,8 @@ add_library (AssistDS STATIC
   DataStructureCallGraph.cpp
   FuncSpec.cpp
   SVADevirt.cpp
-  SimplifyLoad.cpp)
-
-target_link_libraries (AssistDS DSA)
+  SimplifyLoad.cpp
+  
+  DEPENDS
+  DSA
+  )
